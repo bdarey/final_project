@@ -9,19 +9,14 @@ import { ActionService } from './action.service';
 export class AppComponent {
    constructor ( public _action : ActionService) {}
    
+   symbol: any;
    
    onGo () {
      
-   }
-   
-   ngOnInit () {
-     
-   
-    this._action.getData()
+    this._action.getData(this.symbol)
       .subscribe((res: any) => {
-       
         console.log(res);
       })
    }
-  
 }
+  

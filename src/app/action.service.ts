@@ -8,8 +8,8 @@ export class ActionService {
 
   constructor(public _http: HttpClient) {}
   
-  getData () {
-    return this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=MSFT&apikey=B5ANTD06CCK9VORB')
+  getData (symbol) {
+    console.log(symbol)
+    return this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=' + symbol + '&apikey=B5ANTD06CCK9VORB')
   }
 }
-// https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=MSFT&apikey=demo
