@@ -6,9 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ActionService {
 
-  constructor(private _http: HttpClient) {}
+  constructor(public _http: HttpClient) {}
   
   getData () {
-    return this._http.get('https://www.alphavantage.co/query?' + '&api_key=B5ANTD06CCK9VORB')
+    return this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=MSFT&apikey=B5ANTD06CCK9VORB')
   }
 }
+// https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=MSFT&apikey=demo
