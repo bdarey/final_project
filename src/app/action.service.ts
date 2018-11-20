@@ -10,6 +10,7 @@ export class ActionService {
   
   getData (symbol) {
     console.log(symbol)
-    return this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=' + symbol + '&apikey=B5ANTD06CCK9VORB')
+    return this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&apikey=B5ANTD06CCK9VORB')
   }
 }
+

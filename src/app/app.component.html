@@ -1,5 +1,23 @@
 <input [(ngModel)] = 'symbol'> 
 
 <button (click) = 'onGo()'>GO!</button>
+ <div *ngIf="metaData">
+   <p>{{metaData['1. Information']}}</p>
+   <p>{{metaData['3. Last Refreshed']}}</p>
+ </div>
+ <!--<div *ngIf="timeSeries">-->
+ <!--  <p *ngFor='let x of timeSeries'>-->
+ <!--    {{x}}-->
+ <!--  </p>-->
+   
+ <!--</div>-->
+ 
+<!--<div *ngIf=''>-->
+<!--  <div *ngFor='let x of symbol'>-->
+<!--    {{}}-->
+<!--  </div>-->
+  
+<!--</div>-->
+
 
 <router-outlet></router-outlet>
