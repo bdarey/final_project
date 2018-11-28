@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ActionService } from './action.service';
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ClarityModule,
     BrowserAnimationsModule, 
     HttpClientModule, 
-    FormsModule
+    FormsModule, 
+    ChartsModule
   ],
   providers: [ActionService],
   bootstrap: [AppComponent]

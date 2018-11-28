@@ -21,8 +21,9 @@ export class AppComponent {
         this.timeSeries = res['Time Series (Daily)'];
         console.log(this.metaData);
         console.log(res);
-        console.log(this.timeSeries);
+        console.log(this.timeSeries)
       })
    }
+   
 }
   
