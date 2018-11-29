@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActionService } from './action.service';
+import { AppUserService } from './app-user.service'
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,15 @@ import { ActionService } from './action.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-   constructor ( public _action : ActionService) {}
+    user: any;
+   constructor ( public _action : ActionService, public _appUser : AppUserService) {  
+  
+       this._appUser.register()
+       .subscribe( res => {
+           console.log(res)
+       })
+      
+   }
    
    symbol: any;
    metaData: any;

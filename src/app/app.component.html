@@ -1,12 +1,31 @@
-<input [(ngModel)] = 'symbol'> 
+<div class="wrapper">
+ 
+  <div class="navbar">Navbar</div>
+  
+  <div class="sidebar">Sidebar</div>
+  
+  <div class="graph">Graph</div>
+  
+  <div class="footer">Footer</div>
+  
+</div>
 
-<button (click) = 'onGo()'>GO!</button>
- <div *ngIf="metaData">
-   <p>{{metaData['1. Information']}}</p>
-   <p>{{metaData['3. Last Refreshed']}}</p>
- </div>
+
+<!--<input [(ngModel)] = 'symbol'> -->
+
+<!--<button (click) = 'onGo()'>GO!</button>-->
+<!-- <div *ngIf="metaData">-->
+<!--   <p>{{metaData['1. Information']}}</p>-->
+<!--   <p>{{metaData['3. Last Refreshed']}}</p>-->
+<!-- </div>-->
+ 
  <!--<div *ngIf="timeSeries">-->
- <!--  <p *ngFor='let x of timeSeries'>-->
+ <!--  <p>{{timeSeries[2018-11-28]}}</p>-->
+  
+ <!--</div>-->
+ 
+ <!--<div *ngIf="timeSeries">-->
+ <!--  <p *ngFor="let x of timeSeries">-->
  <!--    {{x}}-->
  <!--  </p>-->
    
