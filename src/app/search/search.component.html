@@ -1,0 +1,39 @@
+<!--<div class="wrapper">-->
+<!--    <div class="navbar"></div>-->
+  
+<!--  <div class="sidebar">Sidebar</div>-->
+  
+<!--  <div class="graph">Graph</div>-->
+  
+<!--  <div class="footer">Footer</div>-->
+  
+<div class="wrapper">
+    <div class="searchBar">
+        <input placeholder="enter search criteria here" [(ngModel)] = 'symbol'>
+        <button (click) = 'onGo()'>GO!</button>
+    <div *ngIf="metaData">
+       <p>{{metaData['1. Information']}}</p>
+       <p>{{metaData['3. Last Refreshed']}}</p>
+    </div>
+ 
+    <div *ngIf="timeSeries">
+       <p>{{timeSeries[2018-11-28]}}</p>
+    </div>
+    
+     </div>
+ 
+ </div>
+ <!--<div *ngIf="timeSeries">-->
+ <!--  <p *ngFor="let x of timeSeries">-->
+ <!--    {{x}}-->
+ <!--  </p>-->
+
+ <!--</div>-->
+ 
+
+<!--<div *ngIf=''>-->
+<!--  <div *ngFor='let x of symbol'>-->
+<!--    {{}}-->
+<!--  </div>-->
+  
+<!--</div>-->
