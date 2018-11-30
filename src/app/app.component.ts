@@ -9,14 +9,25 @@ import { AppUserService } from './app-user.service'
 })
 export class AppComponent {
     user: any;
-   constructor ( public _action : ActionService, public _appUser : AppUserService) {  
-  
-       this._appUser.register()
-       .subscribe( res => {
-           console.log(res)
-       })
-      
-   }
+   constructor ( public _action : ActionService, public _appUser : AppUserService) { }
+   
+    userData = {
+        firstName: "benji",
+        lastName: "dare",
+        email: "555@gmail.com",
+        password: "benji1"
+    };
+ 
+ 
+   onSubmit () {
+       
+    this._appUser.register(this.userData)
+       .subscribe(( res: any ) => {
+            // window.sessionStorage.setItem('token', res.token);
+            // window.sessionStorage.setItem('userId', res.userId);
+            console.log(res)
+        })
+    }
    
    symbol: any;
    metaData: any;
@@ -26,12 +37,12 @@ export class AppComponent {
      
     this._action.getData(this.symbol)
       .subscribe((res: any) => {
-        this.metaData = res['Meta Data'];
-        this.timeSeries = res['Time Series (Daily)'];
-        console.log(this.metaData);
-        console.log(res);
-        console.log(this.timeSeries)
-      })
+            this.metaData = res['Meta Data'];
+            this.timeSeries = res['Time Series (Daily)'];
+            console.log(this.metaData);
+            console.log(res);
+            console.log(this.timeSeries)
+        })
    }
    
 }
