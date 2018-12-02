@@ -3,6 +3,48 @@
     padding: 0;
 }
 
+.searchBar {
+   background-color: #0F171C;
+   display: flex;
+   justify-content: center;
+   padding: 1.5em;
+   
+}
+
+.btn-primary {
+    background-color: #6D7884;
+    border: .5px solid #324F61;
+    margin-left: .2em;
+}
+
+input {
+    width: 250px;
+    color: white;
+    text-transform: uppercase;
+    border-color: #324F61;
+    text-align: center;
+    
+}
+
+input:focus {
+   /*border-color: yellow;*/
+ 
+}
+
+.btn-primary:hover {
+    background-color: #324F61;
+    border: .5px solid #324F61;
+}
+
+.sidebar {
+    background-color: grey;
+}
+.sidebarResults {
+    color: yellow;
+    /*background-color: grey;*/
+    font-size: 20px;
+}
+
 /*.wrapper {*/
 /*    display: grid;*/
 /*    grid-template-columns: 1fr 2fr 1fr;*/
