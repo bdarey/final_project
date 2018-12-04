@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AppUserService {
-
+notloggedIn = true
   constructor(public _http: HttpClient) { }
   
   register (user) {

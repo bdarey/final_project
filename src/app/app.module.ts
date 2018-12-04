@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { PostloginComponent } from './postlogin/postlogin.component';
+import { AppUserService } from './app-user.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { PostloginComponent } from './postlogin/postlogin.component';
     FormsModule, 
     ChartsModule
   ],
-  providers: [ActionService],
+  providers: [ActionService, AppUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

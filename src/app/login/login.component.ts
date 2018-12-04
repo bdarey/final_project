@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
               window.sessionStorage.setItem('userId', res.userId);
               console.log(res)
       this.router.navigate(['PostLoginComponent'])
+      this._appUser.notloggedIn = false
           })
     }
 }

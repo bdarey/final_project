@@ -1,4 +1,4 @@
-<ul class="nav">
+<ul *ngIf='_userService.notloggedIn' class="nav">
     <li>
       <a routerLink="signup">Sign Up</a>
     </li>
