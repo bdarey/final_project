@@ -14,13 +14,13 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
   
-  symbol: any;
+  title: any;
    metaData: any;
    timeSeries: any;
    
    onGo () {
      
-    this._action.getData(this.symbol)
+    this._action.getData(this.title)
       .subscribe((res: any) => {
             this.metaData = res['Meta Data'];
             this.timeSeries = res['Time Series (Daily)'];
