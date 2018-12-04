@@ -14,6 +14,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
+import { PostloginComponent } from './postlogin/postlogin.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     SearchComponent,
     LoginComponent,
     SignupComponent, 
-    HomeComponent
+    HomeComponent, 
+    PostloginComponent
   ],
   imports: [
     BrowserModule,

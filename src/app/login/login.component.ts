@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppUserService } from '../app-user.service';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   user: any;
-  constructor(public _appUser : AppUserService) { }
+  constructor(public _appUser : AppUserService, private router: Router) { }
   
   
 
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
               window.sessionStorage.setItem('token', res.token);
               window.sessionStorage.setItem('userId', res.userId);
               console.log(res)
+      this.router.navigate(['PostLoginComponent'])
           })
     }
 }

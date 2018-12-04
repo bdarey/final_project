@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppUserService } from '../app-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +9,7 @@ import { AppUserService } from '../app-user.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(public _appUser : AppUserService) { }
+  constructor(public _appUser : AppUserService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -27,6 +28,7 @@ export class SignupComponent implements OnInit {
               window.sessionStorage.setItem('token', res.token);
               window.sessionStorage.setItem('userId', res.userId);
               console.log(res)
+      this.router.navigate(['PostLoginComponent'])
               
           })
     }
