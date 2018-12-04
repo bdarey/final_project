@@ -1,3 +1,5 @@
-<input placeholder="email">
-<input placeholder="password">
+<input placeholder="email" [(ngModel)]='userData.email'>
+<br>
+<input placeholder="password" [(ngModel)]='userData.password'>
+<br>
 <button (click)= "onLogin()">Login</button>

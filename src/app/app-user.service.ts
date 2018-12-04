@@ -10,7 +10,10 @@ export class AppUserService {
   
   register (user) {
     return this._http.post("http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers" , user)
-}
+};
   
+  login (user) {
+    return this._http.post("http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/login" , user)
+  };
 
 }

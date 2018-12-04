@@ -1,33 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { AppUserService } from '../app-user.service';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class LoginComponent implements OnInit {
-  user: any;
+export class SignupComponent implements OnInit {
+
   constructor(public _appUser : AppUserService) { }
-  
-  
 
   ngOnInit() {
   }
-  
-  userData = {
-       email: '', 
-       password:''
-    };
-    
-    onLogin () {
-       console.log(this.userData)
-      this._appUser.login(this.userData)
+
+    userInfo = {
+      firstName: '', 
+      lastName: '',
+      email: '', 
+      password: ''
+    }
+ 
+    onSignup () {
+      console.log(this.userInfo)
+      this._appUser.register(this.userInfo)
          .subscribe(( res: any ) => {
               window.sessionStorage.setItem('token', res.token);
               window.sessionStorage.setItem('userId', res.userId);
               console.log(res)
+              
           })
     }
 }
