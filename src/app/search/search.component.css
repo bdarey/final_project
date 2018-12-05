@@ -1,63 +1,55 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
-.searchBar {
-   background-color: #0F171C;
-   display: flex;
-   justify-content: center;
-   padding: 1.5em;
-   
+.gridDisplayMovies {
+    display: grid;
+    grid-template-columns:;
 }
 
-.btn-primary {
-    background-color: #6D7884;
-    border: .5px solid #324F61;
-    margin-left: .2em;
-}
-
-input {
-    width: 250px;
-    text-transform: uppercase;
-    border-color: #324F61;
-    text-align: center;
+.card-body {
     
 }
 
-input:focus {
-   /*border-color: yellow;*/
- 
+.flex {
+    display: grid;
+	grid-template-columns:25% 25% 25% 25%;
+	grid-gap: 20px;
+   
 }
 
-.btn-primary:hover {
-    background-color: #324F61;
-    border: .5px solid #324F61;
-}
-
-.sidebar {
-    background-color: grey;
-}
-.sidebarResults {
-    color: yellow;
-    /*background-color: grey;*/
-    font-size: 20px;
-}
-
-/*.wrapper {*/
-/*    display: grid;*/
-/*    grid-template-columns: 1fr 2fr 1fr;*/
-/*    grid-auto-rows: minmax(100px, auto);*/
-/*    grid-gap: 1em;*/
+/*.row {*/
+    
+    /*background-color: #121934;*/
 /*}*/
 
-/*.wrapper > div{*/
-/*    background: #eee;*/
-/*    padding: 1em;*/
+/*headers*/
+/*.col-sm-12 {*/
+/*    background-color: #2A3250;*/
+/*}*/
+/*.col-sm-12 > h1 {*/
+/*    color: white;*/
+    
 /*}*/
 
-/*.wrapper > div:nth-child(odd) {*/
-/*    background: #ddd;*/
+/*.col-9 {*/
+/*    background-color: blue;*/
+/*    color: white;*/
 /*}*/
 
+/*.form-control {*/
+/*    color: white;*/
+/*}*/
+/*.col-3 {*/
+/*    background-color: yellow;*/
+/*}*/
+
+/*.searchButton {*/
+    /*background-color: #121934;*/
+/*}*/
+
+/*.searchButton:hover {*/
+/*    cursor: pointer;*/
+/*}*/
 
