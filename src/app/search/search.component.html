@@ -1,28 +1,53 @@
 <div class="wrapper">
-  <div class="headers">
+  
+  <div class="mainHeader">
     <h1>Search for any movie!</h1>
+    <div class="searchBar">
+      <input placeholder="Search Movies" [(ngModel)]="movie">
+      <button class="searchButton" (click)="searchMovies()" >search</button>
+    </div>
   </div>
-
-  <div class="searchBar">
-    <input placeholder="Search Movies" [(ngModel)]="movie">
-    <button (click)="searchMovies()" >search</button>
-  </div>
-<div class="flex">
+  
+  <!--ON SEARCHING MOVIES-->
+  <div class="grid">
     <div class="" *ngFor="let movie of search_result; let i = index">
-        <div *ngIf="i < 9">
-          <div class="">
-            <!--<div class="">-->
+        <div *ngIf="i < 16">
+          
+            <div class="movieDateRelease">
               {{ movie.release_date | date:'mediumDate':'yyyy' }}
-            <!--</div>-->
+            </div>
             <div class="">
               <img class="" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 300px">
-              <!--<p class="">{{ movie.original_title }}</p>-->
+              <p class="movieTitle">{{ movie.original_title }}</p>
               <!--<a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
             </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <!--POPULAR MOVIES-->
+  <div class="headers">
+    <h1>POPULAR MOVIES</h1>
+  </div>
+  
+  <div class="grid">
+    <div class="" *ngFor="let popular of popular_movies; let i = index">
+      <div *ngIf="i < 16">
+        <div class="">
+          <div class="movieDateRelease">
+            {{ popular.release_date | date:'mediumDate' }}
+          </div>
+          <div class="">
+            <img class="" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 300px">
+            <p class="movieTitle">{{ popular.original_title }}</p>
+            <!--<a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
           </div>
         </div>
       </div>
-      </div>
+    </div>
+  </div>
+  
 </div>
 <!--<div class="container">-->
   
