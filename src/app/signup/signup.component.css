@@ -6,7 +6,7 @@
 
 .loginBox {
     width: 320px;
-    height: 550px;
+    height: 590px;
     background: #000; 
     color: #fff;
     top: 50%;
@@ -28,6 +28,8 @@
     top: -50px;
     left: calc(50% - 50px);
 }
+
+
 
 h1 {
     color: white;
@@ -80,17 +82,28 @@ p {
     background: #3b57ad;
     color: white;
 }
-.loginBox a{
+
+
+/*#loginText a{*/
+/*    text-decoration: none;*/
+/*    font-size: 12px;*/
+/*    line-height: 20px;*/
+/*    color: darkgrey;*/
+/*}*/
+
+/*.#loginText a:hover{*/
+/*    color: #6280df;*/
+/*}*/
+
+#loginText {
+     text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    color:  #3b57ad;
     text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgrey;
 }
 
-.loginBox a:hover
-{
-    color: #6280df;
+#loginText:hover {
+    text-decoration: none;
+    
 }
-
-
-
