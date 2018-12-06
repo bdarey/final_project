@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'signup', pathMatch: 'full' },
   { path: 'signup', component: SignupComponent }, 
   { path: 'login', component: LoginComponent }, 
-  { path: 'PostLoginComponent', component: PostloginComponent}
+  { path: 'postlogin', component: PostloginComponent }, 
+  { path: 'home', component: HomeComponent }
   ];
 
 @NgModule({
@@ -21,3 +23,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
