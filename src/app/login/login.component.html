@@ -1,5 +1,23 @@
-<input placeholder="email" [(ngModel)]='userData.email'>
-<br>
-<input placeholder="password" [(ngModel)]='userData.password'>
-<br>
-<button (click)= "onLogin()">Login</button>
+
+<div class="wrapper">
+    <div class="loginBox">
+    <img src='avatar.jpg' class="avatar">
+        <h1>Login Here</h1>
+        <form>
+            <p>Email</p>
+           <input type="text" name="email" placeholder="email" [(ngModel)]='userData.email'>
+           <p>Password</p>
+           <input type="password" name="password" placeholder="password" [(ngModel)]='userData.password'>
+           <input type="submit" name="" value="Login" (click)= "onLogin()">
+           <a href="#">Don't have an account?</a>
+           <br>
+        </form>
+    </div>
+</div>
+
+
+<!--<input placeholder="email" [(ngModel)]='userData.email'>-->
+<!--<br>-->
+<!--<input placeholder="password" [(ngModel)]='userData.password'>-->
+<!--<br>-->
+<!--<button (click)= "onLogin()">Login</button>-->

@@ -1,10 +1,31 @@
 
-<input placeholder="first name" [(ngModel)]='userInfo.firstName'>
-<br>
-<input placeholder="last name" [(ngModel)]='userInfo.lastName'>
-<br>
-<input placeholder="email" [(ngModel)]='userInfo.email'>
-<br>
-<input placeholder="password" [(ngModel)]='userInfo.password'>
-<br>
-<button (click)= "onSignup()">Sign Up!</button>
+
+<div class="wrapper">
+    <div class="loginBox">
+    <img src='avatar.jpg' class="avatar">
+        <h1>Sign Up</h1>
+        <form>
+        <p>First Name</p>
+                <input name="firstName" type="text" placeholder="first name" [(ngModel)]='userInfo.firstName'>
+        <p>Last Name</p>
+                <input name="lastName" type="text" placeholder="last name" [(ngModel)]='userInfo.lastName'>
+        <p>Email</p>
+           <input name="email" type="text" placeholder="email" [(ngModel)]='userInfo.email'>
+        <p>Password</p>
+           <input type="password" name="password" placeholder="password" [(ngModel)]='userInfo.password'>
+           <input type="submit" name="signup" value="Sign Up" (click)= "onSignup()">
+        </form>
+    </div>
+</div>
+
+
+
+        <!--<input placeholder="first name" [(ngModel)]='userInfo.firstName'>-->
+        <!--<br>-->
+        <!--<input placeholder="last name" [(ngModel)]='userInfo.lastName'>-->
+        <!--<br>-->
+        <!--<input placeholder="email" [(ngModel)]='userInfo.email'>-->
+        <!--<br>-->
+        <!--<input placeholder="password" [(ngModel)]='userInfo.password'>-->
+        <!--<br>-->
+        <!--<button (click)= "onSignup()">Sign Up!</button>-->

@@ -1,8 +1,6 @@
-<ul *ngIf='_userService.notloggedIn' class="nav">
-    <li>
-      <a routerLink="signup">Sign Up</a>
-    </li>
-    <li>
-      <a routerLink="login">Login</a>
-    </li>
-  </ul>
+<div *ngIf='_userService.notloggedIn'>
+  <a routerLink="signup">Sign Up</a>
+   <a routerLink="login">Login</a>
+</div>
+
+
