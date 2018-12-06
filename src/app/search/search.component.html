@@ -3,18 +3,18 @@
     <div class="header-nav">
         <a href="javascript://" class="nav-link nav-text">Popular Movies</a>
         <a href="javascript://" class="nav-link nav-text">Upcoming Movies</a>
+        <a href="javascript://" class="nav-link nav-text">Favorites</a>
+        <a href="javascript://" class="nav-link nav-text">Search</a>
+        <a href="javascript://" class="nav-link nav-text">Logout</a>
     </div>
   </header>
-  
   
   
   <div class="mainHeader">
     <h1>Search for any movie!</h1>
     <div class="searchBar">
       <input placeholder="Search Movies" [(ngModel)]="movie">
-     
       <button class="btn btn-primary" (click)="searchMovies()">search</button>
-
     </div>
   </div>
   
@@ -22,7 +22,6 @@
   <div class="grid">
     <div class="" *ngFor="let movie of search_result; let i = index">
         <div *ngIf="i < 16">
-          
             <div class="movieDateRelease">
               {{ movie.release_date | date:'mediumDate':'yyyy' }}
             </div>
@@ -44,16 +43,12 @@
   <div class="grid">
     <div class="" *ngFor="let popular of popular_movies; let i = index">
       <div *ngIf="i < 16">
-        <div class="">
           <div class="movieDateRelease">
             {{ popular.release_date | date:'mediumDate' }}
           </div>
-          <div class="">
             <img class="" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 300px">
             <p class="movieTitle">{{ popular.original_title }}</p>
             <!--<a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -207,3 +202,4 @@
 <!--  </div>-->
   
 <!--</div>-->
+

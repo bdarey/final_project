@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActionService } from '../action.service';
+import { Router } from '@angular/router';
+import { SignupComponent } from '../signup/signup';
 
 @Component({
   selector: 'app-search',
