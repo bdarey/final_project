@@ -1,5 +1,5 @@
 * {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     /*padding: 0;*/
 }
 
@@ -11,6 +11,14 @@ h1 {
     
 }
 
+
+.header-6 {
+    background-color: #3F4661;
+}
+.header-nav {
+    /*display: default;*/
+    /*justify-content: center;*/
+}
 input {
     height: 35px;
     width: 300px;
@@ -23,8 +31,10 @@ input {
     margin: 0;
 }
 
-.searchButton {
+.btn {
     cursor: pointer;
+    margin: 0;
+    margin-left: .3em;
 }
 
 .grid {

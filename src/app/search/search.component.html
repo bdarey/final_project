@@ -1,10 +1,20 @@
 <div class="wrapper">
+  <header class="header-6">
+    <div class="header-nav">
+        <a href="javascript://" class="nav-link nav-text">Popular Movies</a>
+        <a href="javascript://" class="nav-link nav-text">Upcoming Movies</a>
+    </div>
+  </header>
+  
+  
   
   <div class="mainHeader">
     <h1>Search for any movie!</h1>
     <div class="searchBar">
       <input placeholder="Search Movies" [(ngModel)]="movie">
-      <button class="searchButton" (click)="searchMovies()" >search</button>
+     
+      <button class="btn btn-primary" (click)="searchMovies()">search</button>
+
     </div>
   </div>
   
