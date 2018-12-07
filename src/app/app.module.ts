@@ -16,6 +16,9 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { PostloginComponent } from './postlogin/postlogin.component';
 import { AppUserService } from './app-user.service';
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,7 @@ import { AppUserService } from './app-user.service';
     LoginComponent,
     SignupComponent, 
     HomeComponent, 
-    PostloginComponent
+    PostloginComponent, ComingsoonComponent, NavbarComponent, FavoritesComponent
   ],
   imports: [
     BrowserModule,

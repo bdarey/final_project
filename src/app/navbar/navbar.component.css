@@ -1,0 +1,50 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #3F4661;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-radius: 5px;
+    width: 1100px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    padding: 0px 32px 0px 32px;
+    font-size: 26px;
+    color: #B9BBC5;
+}
+
+a {
+    text-decoration: none;
+}
+
+li:hover {
+    color: white;
+}
+
+a:visited {
+    color: #B9BBC5;
+}
+
+/*.header-6 {*/
+/*    background-color: #3F4661;*/
+/*    justify-content: space-around;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.header-nav {*/
+/*   font-size: 1.7em;*/
+/*   left: none;*/
+/*}*/
