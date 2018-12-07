@@ -1,20 +1,20 @@
 
 <div class="wrapper">
     <div class="loginBox">
-    <img src="avatar.png" class="avatar">
-        <h1>Login Here</h1>
+    <img src="assets/avatar.png" class="avatar">
+        <h1>Login</h1>
         <form>
             <p>Email</p>
            <input type="text" name="email" placeholder="email" [(ngModel)]='userData.email'>
            <p>Password</p>
            <input type="password" name="password" placeholder="password" [(ngModel)]='userData.password'>
-           <input type="submit" name="" value="Login" (click)= "onLogin()">
-           <a href="#" id="signupText"><p>Don't have an account?</p></a>
+           <a routerLink="/postlogin"><input type="submit" name="" value="Login" (click)= "onLogin()"></a>
            <br>
+           <a routerLink="/signup"><p id="signupText">Don't have an account?</p></a>
         </form>
     </div>
 </div>
-
+<!--<a routerLink="/login"><p id="loginText">Already have an account?</p></a>-->
 
 <!--<input placeholder="email" [(ngModel)]='userData.email'>-->
 <!--<br>-->
