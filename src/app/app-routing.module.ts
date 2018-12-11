@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'comingsoon', component: ComingsoonComponent }, 
   { path: 'navbar', component: NavbarComponent }, 
-  { path: 'favorites', component: FavoritesComponent }
+  { path: 'favorites', component: FavoritesComponent }, 
   ];
 
 @NgModule({

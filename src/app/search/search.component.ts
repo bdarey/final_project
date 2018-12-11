@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActionService } from '../action.service';
 import { Router } from '@angular/router';
+import { AppUserService } from '../app-user.service';
 
 @Component({
   selector: 'app-search',
@@ -13,8 +14,9 @@ export class SearchComponent implements OnInit {
     upcoming_movies: any;
     search_result: any;
     movie: any;
+   
     
-  constructor( public _action : ActionService ) { 
+  constructor( public _action : ActionService, public _appUser : AppUserService) { 
     // get upcoming movies
     this._action.getUpcomingMovies().subscribe(data => {
         this.upcoming_movies = data['results'];
@@ -35,26 +37,25 @@ export class SearchComponent implements OnInit {
       this.search_result = data['results'];
       console.log(this.search_result);
     });
+  }
+  
+  
+  saveFavorites (save) {
+    console.log(save)
+    this._appUser.postFav(window.sessionStorage.userId, window.sessionStorage.token, {"title" : save} )
+    .subscribe (
+      (data:any) => {
+        console.log(data)
+      })
+  } 
     
-}
+    
+  
+    
+
     
   ngOnInit() {
   }
-  
-//   title: any;
-//   results: any;
-//   timeSeries: any;
-   
-//   onGo () {
-     
-//     this._action.getData(this.title)
-//       .subscribe((res: any) => {
-//             this.results = res.results;
-//             // this.timeSeries = res['Time Series (Daily)'];
-//             console.log(this.metaData);
-//             console.log(res);
-//             console.log(this.timeSeries)
-//         })
-//   }
+
 
 }
