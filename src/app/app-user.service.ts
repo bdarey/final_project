@@ -25,6 +25,11 @@ notloggedIn = window.sessionStorage.getItem('userId') ? false:true
     return this._http.post("http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/" + userID + "/favorites?access_token=" + token, favoriteMovie)
   };
   
+  getFav(userID, token, favoriteMovie) {
+    return this._http.get("http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/" + userID + "/favorites?access_token=" + token, favoriteMovie)
+  };
+  
+ 
   // getFav() {
   //   return this._http.get(this.base_url + "favorites")
   // };

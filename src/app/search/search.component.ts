@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
     upcoming_movies: any;
     search_result: any;
     movie: any;
+  
    
     
   constructor( public _action : ActionService, public _appUser : AppUserService) { 
@@ -47,6 +48,10 @@ export class SearchComponent implements OnInit {
       (data:any) => {
         console.log(data)
       })
+      
+  
+      
+      
   } 
     
     

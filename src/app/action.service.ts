@@ -33,11 +33,10 @@ export class ActionService {
   }
   
   
-  // getData (title) {
-  //   // console.log(symbol)
-  //   // return this._http.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&apikey=B5ANTD06CCK9VORB')
-  //   return this._http.get('https://api.themoviedb.org/3/movie/550?api_key=' + title + '7f6b03c84712b057aff029c87f5f8cf5')
-  // }
+ logout(token) {
+  return this._http.post("http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/logout?access_token=" + token, {})
+ }
+ 
 }
 
 // 7f6b03c84712b057aff029c87f5f8cf5

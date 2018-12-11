@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActionService } from '../action.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,16 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor( ) { }
-
+  constructor(public _action : ActionService ) { }
+  
+  onLogout () {
+    this._action.logout(window.sessionStorage.token)
+    .subscribe( ( data : any ) => {
+    window.sessionStorage.clear()
+  })
+  }
+  
+ 
   ngOnInit() {
   }
 
