@@ -11,6 +11,7 @@ import { AppUserService } from '../app-user.service';
 })
 export class SearchComponent implements OnInit {
     search_result: any;
+    movie: any;
   
    
     

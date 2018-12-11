@@ -13,7 +13,7 @@ export class PostloginComponent implements OnInit {
     popular_movies: any;
     upcoming_movies: any;
     // search_result: any;
-    movie: any;
+    // movie: any;
   
   constructor(public _action : ActionService, public _appUser : AppUserService) { 
 
