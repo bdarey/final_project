@@ -3,6 +3,7 @@
     padding: 0;
     display: flex;
     justify-content: center;
+    /*position: fixed;*/
 }
 
 .navbar {
@@ -30,13 +31,15 @@ a {
     text-decoration: none;
 }
 
-li:hover {
-    color: white;
-}
 
 a:visited {
     color: #B9BBC5;
 }
+
+a:hover {
+    color: white;
+}
+
 
 /*.header-6 {*/
 /*    background-color: #3F4661;*/

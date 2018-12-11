@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PostloginComponent } from './postlogin/postlogin.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
-import { NavbarComponent } from './navbar/navbar.component':
+import { NavbarComponent } from './navbar/navbar.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 
 

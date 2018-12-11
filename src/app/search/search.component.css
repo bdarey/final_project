@@ -8,33 +8,63 @@ h1 {
     color: white;
     padding: 10px;
     text-align: center;
+    font-family: "Metropolis","Avenir Next","Helvetica Neue", Arial, sans-serif;
     
 }
 
+
 input {
-    height: 35px;
-    width: 300px;
+    height: 60px;
+    width: 400px;
+}
+
+#searchInput {
+    border: black solid 1px;
+    outline: none;
+    background: rgba(59, 87, 173, .2);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.2s ease all
 }
 
 .searchBar {
     display: flex;
     justify-content: center;
     padding: 0px;
-    /*padding-bottom: 15px;*/
+    padding-bottom: 15px;
     margin: 0;
 }
 
 .btn {
     cursor: pointer;
     margin: 0;
-    margin-left: .3em;
+    margin-left: -6.8em;
+    background-color: #3b57ad;
+    border: none;
+    border-radius: 15px;
+    height: 55px;
+    
+}
+
+.btn:hover {
+     /*background-color: #3b57ad;*/
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.buttonPosition {
+    display: flex;
+    align-items: center;
 }
 
 .grid {
     display: grid;
 	grid-template-columns:25% 25% 25% 25%;
 	grid-gap: 20px;
-   
 }
 
 .movieDateRelease {
@@ -53,3 +83,17 @@ input {
 .details {
     text-align: center;
 }
+
+.alignment {
+    margin: auto;
+    width: 100%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+.poster {
+     /*margin-left: 30px;*/
+}
+/*.poster {*/
+/*    text-align: center;*/
+/*}*/
