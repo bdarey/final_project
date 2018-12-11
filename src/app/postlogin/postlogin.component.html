@@ -1,12 +1,61 @@
 <div class="container">
-    <div class="searchBar">
-        <app-search></app-search>
+    <app-navbar></app-navbar>
+  
+    <app-search></app-search>
+  <!--<div class="mainHeader">-->
+  <!--  <h1>Search for any movie!</h1>-->
+  <!--</div>-->
+  <!--<div class="searchBar">-->
+  <!--  <input id="searchInput" placeholder="Search Movies" [(ngModel)]="movie">-->
+  <!--  <div class="buttonPosition">-->
+  <!--    <button class="btn btn-primary" (click)="searchMovies()">Search</button>-->
+  <!--  </div>-->
+    
+  <!--</div>-->
+
+  
+  <!--ON SEARCHING MOVIES-->
+  <!--<div class="grid">-->
+  <!--  <div class="" *ngFor="let movie of search_result; let i = index">-->
+  <!--      <div *ngIf="i < 16">-->
+            <!--<div class="movieDateRelease">-->
+            <!--  {{ movie.release_date | date:'mediumDate':'yyyy' }}-->
+            <!--</div>-->
+  <!--          <div class="alignment">-->
+  <!--            <img class="poster" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 300px">-->
+  <!--            <div class="title">-->
+  <!--              <p class="movieTitle">{{ movie.original_title }}</p>-->
+  <!--            </div>-->
+              <!--<a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
+  <!--          </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</div>-->
+  
+  <!--POPULAR MOVIES-->
+  <div class="headers">
+    <h1>POPULAR MOVIES</h1>
+  </div>
+  
+  <div class="grid">
+    <div class="" *ngFor="let popular of popular_movies; let i = index">
+      <div *ngIf="i < 16">
+          <!--<div class="movieDateRelease">-->
+          <!--  {{ popular.release_date | date:'mediumDate' }}-->
+          <!--</div>-->
+          <div class="alignment">
+            <img class="poster" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 300px">
+            <p class="movieTitle">{{ popular.original_title }}</p>
+            <button (click) = "saveFavorites(popular.original_title)">favorite this</button>
+            <!--<a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
+          </div>
+          
+          
+          <!--<button ('click') = "_appUser.postFav()" >Favorite this</button>-->
+      </div>
     </div>
-    
-    
-    
-    
-    
+  </div>
+  
     
 </div>
 <!--<router-outlet></router-outlet>-->
