@@ -13,7 +13,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { HomeComponent } from './home/home.component';
 import { PostloginComponent } from './postlogin/postlogin.component';
 import { AppUserService } from './app-user.service';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
@@ -26,7 +25,6 @@ import { FavoritesComponent } from './favorites/favorites.component';
     SearchComponent,
     LoginComponent,
     SignupComponent, 
-    HomeComponent, 
     PostloginComponent, ComingsoonComponent, NavbarComponent, FavoritesComponent
   ],
   imports: [
