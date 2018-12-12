@@ -33,15 +33,6 @@ export class PostloginComponent implements OnInit {
     
 }
     
-  
-      // get search results of movies
-  // searchMovies() {
-  //   this._action.searchMovie(this.movie).subscribe(data => {
-  //     this.search_result = data['results'];
-  //     console.log(this.search_result);
-  //   });
-  // }
-  
 
   saveFavorites (save) {
     console.log(save)

@@ -1,16 +1,14 @@
 .container {
-    width: 75%;
+    width: 80%;
 }
-
-
-
 
 h1 {
     color: white;
     padding: 10px;
     text-align: center;
     font-family: "Metropolis","Avenir Next","Helvetica Neue", Arial, sans-serif;
-    
+    padding-bottom: 80px;
+    font-size: 50px;
 }
 
 
@@ -49,12 +47,12 @@ input {
     
 }
 
-.btn:hover {
-     /*background-color: #3b57ad;*/
-}
 
-.btn:focus {
-  outline: none;
+button {
+    height: 20px;
+    width: 20px;
+    background-image: url('/../assets/heart.svg');
+    background-color: none;
 }
 
 .buttonPosition {
@@ -87,12 +85,7 @@ input {
 
 .alignment {
     text-align: center;
- 
-
-    /*margin: auto;*/
-    /*width: 100%;*/
-    /*border: 3px solid green;*/
-    /*padding: 10px;*/
+    position: relative;
 }
 
 .title {
@@ -101,8 +94,36 @@ input {
 
 .poster {
     border-radius: 10px;
-     /*margin-left: 30px;*/
 }
-/*.poster {*/
-/*    text-align: center;*/
-/*}*/
+
+img {
+    box-shadow: 4px 4px 4px rgba(35, 23, 23, .4);
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+
+
+.favoriteButton {
+    transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img:hover {
+    opacity: 0.3;
+}
+
+/*MAKES BUTTON APPEAR*/
+.alignment:hover .favoriteButton {
+    opacity: 1;
+}
+
+.favoriteButton:hover {
+    opacity: .3;
+}
