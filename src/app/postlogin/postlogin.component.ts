@@ -12,23 +12,13 @@ import { AppUserService } from '../app-user.service';
 export class PostloginComponent implements OnInit {
     popular_movies: any;
     upcoming_movies: any;
-    // search_result: any;
-    // movie: any;
-  
+    
   constructor(public _action : ActionService, public _appUser : AppUserService) { 
 
 
-   // get upcoming movies
-    this._action.getUpcomingMovies().subscribe(data => {
-        this.upcoming_movies = data['results'];
-        console.log(this.upcoming_movies);
-    });
-    
-    // get popular movies
     
     this._action.getPopularMovies().subscribe(data => {
       this.popular_movies = data['results'];
-      // console.log(this.popular_movies);
     });
     
 }

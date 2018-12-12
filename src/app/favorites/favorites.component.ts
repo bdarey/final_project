@@ -9,30 +9,22 @@ import { AppUserService } from '../app-user.service';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
-  storeTitle: any;
+  titles: any;
 
   constructor(private router: Router, public _appUser : AppUserService) { }
 
+  
   ngOnInit() {
   }
 
-  // onFavorites () {
-  //   this._appUser.getFav(window.sessionStorage.userId, window.sessionStorage.token, this.favoriteMovie)
-  //   .subscribe(data => {
-  //     this.storeTitle = data['title'];
-  //     console.log(this.storeTitle);
-  //   })
+  onFavorites () {
+    this._appUser.getFav(window.sessionStorage.userId, window.sessionStorage.token, this.favoriteMovie)
+    .subscribe(data => {
+      this.titles = data.title;
+      console.log(data);
+    })
+    
   }
 
-// getFav(userID, token, favoriteMovie) 
 
-  // saveFavorites (save) {
-  //   console.log(save)
-  //   this._appUser.postFav(window.sessionStorage.userId, window.sessionStorage.token, {"title" : save} )
-  //   .subscribe (
-  //     (data:any) => {
-  //       console.log(data)
-  //     })
-
-
-
+}

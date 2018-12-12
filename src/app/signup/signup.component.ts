@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
               window.sessionStorage.setItem('token', res.token);
               window.sessionStorage.setItem('userId', res.userId);
               console.log(res)
-      this.router.navigate(['PostLoginComponent'])
+      this.router.navigate(['postlogin'])
               
           })
     }

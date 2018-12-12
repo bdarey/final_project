@@ -17,7 +17,7 @@ export class ComingsoonComponent implements OnInit {
    // get upcoming movies
     this._action.getUpcomingMovies().subscribe(data => {
         this.upcoming_movies = data['results'];
-        console.log(this.upcoming_movies);
+        // console.log(this.upcoming_movies);
     });
   }
 

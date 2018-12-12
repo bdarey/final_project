@@ -1,3 +1,5 @@
+
+
 <div class="container">
     <app-navbar></app-navbar>
     <app-search></app-search>
@@ -12,17 +14,16 @@
     <div class="" *ngFor="let popular of popular_movies; let i = index">
       <div *ngIf="i < 20">
           <div class="alignment">
-            <div>
-            <img class="poster" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 300px">
-            
-            <button class="favoriteButton"(click) = "saveFavorites(popular.original_title)"></button>
-          
+            <div class=contain>
+                <img class="poster" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 300px">
+              <div class="middle">
+                <button class="favoriteButton" (click) = "saveFavorites(popular.original_title)"><img src='assets/heart2.png'></button>
+              </div>
           </div>
             <div class="title">
               <p class="movieTitle">{{ popular.original_title }}</p>
             </div>
-            <!--<a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
-          
+
           
           
           <!--<button ('click') = "_appUser.postFav()" >Favorite this</button>-->
@@ -31,4 +32,5 @@
   </div>
   
     
-</div>
+  </div>
+  </div>

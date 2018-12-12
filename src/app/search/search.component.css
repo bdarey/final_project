@@ -63,12 +63,7 @@ input {
 
 .alignment {
     text-align: center;
- 
-
-    /*margin: auto;*/
-    /*width: 100%;*/
-    /*border: 3px solid green;*/
-    /*padding: 10px;*/
+     padding-top: 100px;
 }
 
 .title {
