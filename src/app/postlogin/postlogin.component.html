@@ -12,8 +12,11 @@
     <div class="" *ngFor="let popular of popular_movies; let i = index">
       <div *ngIf="i < 20">
           <div class="alignment">
+            <div>
             <img class="poster" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 300px">
+            
             <button class="favoriteButton"(click) = "saveFavorites(popular.original_title)"></button>
+          
           </div>
             <div class="title">
               <p class="movieTitle">{{ popular.original_title }}</p>
