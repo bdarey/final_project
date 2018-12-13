@@ -32,9 +32,11 @@ export class ActionService {
   }
   
   
-// logout(token) {
-//   return this._http.post('http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/logout?access_token='; + token, {})
-// }
+ logout(token){
+  return this._http.post('http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/logout?access_token=' + token, {});
+
+}
+ 
  
 }
 

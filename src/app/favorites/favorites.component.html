@@ -1,12 +1,15 @@
 <app-navbar></app-navbar>
-<app-search></app-search>
 
-
-<button (click)="onFavorites()">Display Favorites</button>
-
-<div>
-    <div *ngFor="let title of titles">
-       <p>title: {{ title }}</p>
+<div class="container">
         
+    <button (click)="onFavorites()">Display Favorites</button>
+    
+    <div>
+        <div *ngFor="let title of titles">
+           <p>{{ title.title }}</p>
+            
+        </div>
     </div>
+    
 </div>
+

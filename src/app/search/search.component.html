@@ -1,3 +1,5 @@
+ <div class="container">
+ 
  <div class="mainHeader">
     <h1>Search for any movie!</h1>
   </div>
@@ -11,17 +13,17 @@
   <div class="grid">
     <div class="" *ngFor="let movie of search_result; let i = index">
         <div *ngIf="i < 20">
-            <!--<div class="movieDateRelease">-->
-            <!--  {{ movie.release_date | date:'mediumDate':'yyyy' }}-->
-            <!--</div>-->
             <div class="alignment">
               <img class="poster" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 300px">
+               <div class="middle">
+                <button class="favoriteButton" (click) = "saveFavorites(movie.original_title)"><img src='assets/heart2.png'></button>
+              </div>
               <div class="title">
                 <p class="movieTitle">{{ movie.original_title }}</p>
               </div>
-              <!--<a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>-->
             </div>
       </div>
     </div>
   </div>
   
+</div>

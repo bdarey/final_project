@@ -25,6 +25,15 @@ export class SearchComponent implements OnInit {
       console.log(this.search_result);
     });
   }
+  
+    saveFavorites (save) {
+    console.log(save)
+    this._appUser.postFav(window.sessionStorage.userId, window.sessionStorage.token, {"title" : save} )
+    .subscribe (
+      (data:any) => {
+        console.log(data)
+      })
+  }
     
   
     

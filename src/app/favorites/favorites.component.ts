@@ -10,6 +10,7 @@ import { AppUserService } from '../app-user.service';
 })
 export class FavoritesComponent implements OnInit {
   titles: any;
+  favoriteMovie: any;
 
   constructor(private router: Router, public _appUser : AppUserService) { }
 
@@ -20,10 +21,9 @@ export class FavoritesComponent implements OnInit {
   onFavorites () {
     this._appUser.getFav(window.sessionStorage.userId, window.sessionStorage.token, this.favoriteMovie)
     .subscribe(data => {
-      this.titles = data.title;
+      this.titles = data;
       console.log(data);
     })
-    
   }
 
 

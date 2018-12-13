@@ -30,7 +30,5 @@ notloggedIn = window.sessionStorage.getItem('userId') ? false:true
   };
   
  
-  // getFav() {
-  //   return this._http.get(this.base_url + "favorites")
-  // };
+  
 }

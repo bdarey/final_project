@@ -1,3 +1,7 @@
+.container {
+    width: 80%;
+}
+
 h1 {
     color: white;
     padding: 10px;
@@ -42,9 +46,6 @@ input {
     
 }
 
-.btn:hover {
-     /*background-color: #3b57ad;*/
-}
 
 .btn:focus {
   outline: none;
@@ -63,7 +64,8 @@ input {
 
 .alignment {
     text-align: center;
-     padding-top: 100px;
+    padding-top: 75px;
+
 }
 
 .title {
@@ -80,6 +82,7 @@ input {
     text-align: center;
     color: #9498A7;
     font-size: 20px;
+    margin-top: 0;
 }
 
 img {
@@ -89,4 +92,18 @@ img {
 
 img:hover {
 	transform: scale(1.1);
+}
+
+
+.middle > button {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
 }

@@ -20,6 +20,15 @@ export class ComingsoonComponent implements OnInit {
         // console.log(this.upcoming_movies);
     });
   }
+  
+   saveFavorites (save) {
+    console.log(save)
+    this._appUser.postFav(window.sessionStorage.userId, window.sessionStorage.token, {"title" : save} )
+    .subscribe (
+      (data:any) => {
+        console.log(data)
+      })
+  } 
 
   ngOnInit() {
   }
