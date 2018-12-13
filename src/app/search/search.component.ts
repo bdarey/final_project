@@ -12,13 +12,14 @@ import { AppUserService } from '../app-user.service';
 export class SearchComponent implements OnInit {
     search_result: any;
     movie: any;
+    
   
    
     
   constructor( public _action : ActionService, public _appUser : AppUserService) {}
     
     
-          // get search results of movies
+  // get search results of movies
   searchMovies() {
     this._action.searchMovie(this.movie).subscribe(data => {
       this.search_result = data['results'];
@@ -38,8 +39,5 @@ export class SearchComponent implements OnInit {
   
     
   ngOnInit() {}
-
-
-
 
 }

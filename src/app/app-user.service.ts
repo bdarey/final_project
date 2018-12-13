@@ -5,11 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root' 
 })
 export class AppUserService {
-notloggedIn = window.sessionStorage.getItem('userId') ? false:true
-
-
-// private base_url = "http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/";
-
+  notloggedIn = window.sessionStorage.getItem('userId') ? false:true;
   
   constructor(public _http: HttpClient) { }
   
@@ -28,6 +24,7 @@ notloggedIn = window.sessionStorage.getItem('userId') ? false:true
   getFav(userID, token, favoriteMovie) {
     return this._http.get("http://meanstack-2018-5-benji-phortonssf.c9users.io:8080/api/AppUsers/" + userID + "/favorites?access_token=" + token, favoriteMovie)
   };
+  
   
  
   
